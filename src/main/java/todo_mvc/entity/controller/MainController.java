@@ -38,7 +38,8 @@ public class MainController {
     }
 
     @PostMapping("/save-task")
-    public String saveTask(@ModelAttribute Task task, BindingResult bindingResult, HttpServletRequest request){
+
+    public String saveTask(@ModelAttribute Task task, BindingResult result, HttpServletRequest request){
         task.setDateCreated(new Date());
         taskService.save(task);
         request.setAttribute("tasks", taskService.findAll());

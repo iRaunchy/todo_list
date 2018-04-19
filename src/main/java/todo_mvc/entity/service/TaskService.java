@@ -2,6 +2,7 @@ package todo_mvc.entity.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import todo_mvc.entity.dao.TaskRepository;
 import todo_mvc.entity.model.Task;
 
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Transactional
 public class TaskService {
 
     @Autowired
